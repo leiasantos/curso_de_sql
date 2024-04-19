@@ -1,0 +1,10 @@
+USE  SUCOS;
+
+ALTER  TABLE tbproduto ADD PRIMARY KEY (CODIGO_PRODUTO);
+
+SELECT * FROM tbproduto;
+
+INSERT IGNORE INTO tbproduto(
+CODIGO_PRODUTO, NOME_DO_PRODUTO, EMBALAGEM, TAMANHO, SABOR, PRECO_DE_LISTA) 
+VALUES
+('1096818','Linha Refrescante - 700 ml - Manga',' Garrafa','700 ml',' Manga',7.71);
