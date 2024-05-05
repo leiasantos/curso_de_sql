@@ -1,0 +1,33 @@
+# EXERCICIO 21
+# CRIE UM BANCO DE DADOS banco E UMA TABELA CHAMADA CONTAS;
+# INSIRA AS COLUNAS ID, NOME, SOBRENOME, SALDO, DATA_NASCIMENTO;
+# ENCONTRE OS MELHORES TIPOS DE DADOS PARA AS MESMAS;
+# A COLUNE DE ID DEVE SER PRIMARY KEY, AUTO_INCREMENT E NOT NULL;
+# CRIE UM ÍNDICE EM SALDO;
+# ADICIONE 3 REGISTROS NA TABELA ;
+
+CREATE DATABASE banco;
+
+CREATE TABLE contas(
+id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+nome VARCHAR(100),
+sobrenome VARCHAR(100),
+saldo INT,
+data_nascimento DATE
+);
+
+SELECT * FROM contas;
+
+
+# CRIE UM ÍNDICE EM SALDO;
+CREATE INDEX idx_saldo
+ON contas(saldo);
+
+# ADICIONE 3 REGISTROS NA TABELA ;
+INSERT INTO contas(nome,sobrenome,saldo,data_nascimento)
+VALUES ("Felipe","Silva",5000,"1992-02-20");
+INSERT INTO contas(nome,sobrenome,saldo,data_nascimento)
+VALUES ("Julia","Silva",15000,"1980-12-15");
+INSERT INTO contas(nome,sobrenome,saldo,data_nascimento)
+VALUES ("Clara","Soares",2000,"1987-03-05");
+
